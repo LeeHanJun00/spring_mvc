@@ -34,6 +34,7 @@ public class FrontControllerServletV1 extends HttpServlet {
     // 해당하는 url 의 키값(해당 컨트롤러 생성자)을 가져옴
     ControllerV1 controller = controllerMap.get(requestURI);
 
+    // 해당 URL 의 값이 없으면 404
     if (controller == null) {
       response.setStatus(HttpServletResponse.SC_NOT_FOUND);
       return;
